@@ -1,4 +1,4 @@
-package com.example.flutter_template
+package net.urban-theory.flutter-template
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
