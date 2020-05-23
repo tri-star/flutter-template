@@ -21,7 +21,6 @@ jobs:
 
       - name: Run fastlane
         env:
-          MATCH_APP_IDENTIFIER: "net.urban-theory.flutter-template"
           KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
           SLACK_URL: ${{ secrets.SLACK_URL }}
           FASTLANE_USERNAME: ${{ secrets.FASTLANE_USERNAME }}
