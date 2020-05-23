@@ -4,7 +4,7 @@ storage_mode("git")
 
 type("adhoc") # The default type, can be: appstore, adhoc, enterprise or development
 
-app_identifier(["net.urban-theory.whimsicalendar"])
+app_identifier(["net.urban-theory.flutter-template"])
 username("hirokigs@gmail.com") # Your Apple Developer Portal username
 
 # For all available options run `fastlane match --help`
