@@ -47,6 +47,7 @@ jobs:
 
       - name: Adhoc
         env:
+          MATCH_APP_IDENTIFIER: "net.urban-theory.flutter-template"
           KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
           SLACK_URL: ${{ secrets.SLACK_URL }}
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
