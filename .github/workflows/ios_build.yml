@@ -57,6 +57,9 @@ jobs:
           MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
           APPLE_APP_ID: "net.urban-theory.flutter-template"
           APPLE_TEAM_ID: "F946L3T4HH"
+          APPLE_KEY_ID: ${{ secrets.APPLE_KEY_ID }}
+          APPLE_ISSUER_ID: ${{ secrets.APPLE_ISSUER_ID }}
+          APPLE_KEY_CONTENT: ${{ secrets.APPLE_KEY_CONTENT }}
         run: |
           cd ios
           bundle exec fastlane adhoc --verbose
