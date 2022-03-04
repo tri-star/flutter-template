@@ -19,19 +19,18 @@ MATCH_PASSWORD | matchが発行した証明書を暗号化するパスワード 
 MATCH_GIT_BASIC_AUTHORIZATION | %GitHubのユーザーID%:%GitHubのパーソナルトークン% をBase64したもの | BASE64文字列
 APPLE_APP_ID | アプリケーションのバンドルID | com.example.app-name
 APPLE_TEAM_ID | Apple Developer プログラムのチームID | F946... のような英数字
+APPLE_KEY_ID |  | 10桁程度の大文字英数
+APPLE_ISSUER_ID | XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX のような16進
+APPLE_KEY_CONTENT | -----BEGIN PRIVATE KEY----- で始まる秘密鍵
 
 ## 手作業で対応が必要な部分
 
-### FASTLANE_SESSIONのトークン発行
+### Gemfile.lockの生成
 
-fastlane spaceauth を使用する。
-Windows環境の場合は、以下のようにDockerコンテナを立ち上げて実行する
+Gemfileをどこかからコピーし、以下のコマンドを実行する
 
 ```
-docker run --name=fastlane --rm -v $(pwd):/data -ti fastlanetools/fastlane bash
-
-# 起動後のコンテナの中で以下を実行
-cd /data
-gem install fastlane
-fastlane spaceauth -u xxx@example.com
+docker run --rm -ti -v $(pwd):/src ruby:2.7 bash
+cd /src
+bundle install
 ```
